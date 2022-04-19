@@ -1,64 +1,72 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+## Vizsgafeldat minta 2022 - webprogramozás
+### Laravel és JQuery segítségével néhány végpontot tartalmazó ResApi alkalmazás létrehozása, mely backend és frontend részeket egyaránt tartalmaz 
+Elkészítendő a mintán látható oldal asztali és egy mobil nézete. A töréspont meghatározását a készítőre bízom. 
+A kiinduló Laravel projektet itt lehet elérni: https://github.com/csefikatalin/probavizsga_kiindulo.git 
+Az weblap kialakításához használhatók az előre elkészített welcome.blade.php és dashboard.blade.php oldalak. 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Mobil nézet
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Mobil nézetben a sötétszürke fejléc utolsó két felirata eltűnik, és a linkek előtt megjelenik a "GitHub link" és a "Webcím" felirat a mintának megfelelően.
+Az űrlap az alábbi módon alakul át.
 
-## Learning Laravel
+## Adatbázis
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Az adatbázis neve: probavizsga2022 legyen!
+**szakdoga**
+- id
+- szakdoga_nev
+- githublink
+- oldallink
+- tagokneve
+- timestamps
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+## Api végpontok
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- get '/szakdogak'
+- post('/szakdogak'
+- put('/szakdogak/{id}' 
+- delete('/szakdogak/{id}'
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+## Formázás, reszponzivitás
 
-## Contributing
+| Reszponzív viselkedésű weboldal készítés és formázás	|ÖsszPont:  10| 
+|:----------------------------|----------------:|
+| Az oldal szélessége a böngésző szélességével dinamikusan változik, width %-ban megadva, max-width használata, vagy a bootstrap megfelelő osztályainak használta | 	2| 
+| Az elemek elrendezése asztali nézetben a mintának megfelelő	| 2| 
+| Az oldal egyéb formázásai a mintának megfelelőek (váltott sorok színezése)	| 2| 
+| Mobil nézetben eltűnik a fejléc utolsó két felirata és minden link előtt megjelenik a "GitHub link" és a "Webcím" felirat a mintának megfelelően	| 2| 
+| Az űrlap mobilnézetben a mintának megfelelően jelenik meg. 	| 2| 
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
+## Backend
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+| Backend programozás (adatbázis lekérdezést is végző, néhány végpontot tartalmazó REST API kiszolgáló létrehozása)| 	15| 
+|:----------------------------|----------------:|
+| A 'szakdoga" tábla létrehozása a megfelelő mezőkkel és migrálása az adatbázisba| 	2| 
+| SzakdogaController létrehozása index tagfüggvénnyel| 	2| 
+| SzakdogaController  - törlés megvalósítása| 	2| 
+| SzakdogaController  - módosítás megvalósítása| 	2| 
+| SzakdogaController  - új rekord rögzítésének  megvalósítása megvalósítása| 	2| 
+| Végpontok elkészítése (rootolás) 	| 2| 
+| Érd el, hogy a szakdoga oldalhoz csak a bejelentkezés után lehessen hozzáférni	| 2| 
+| Törlés, módosítás és új adat rögzítése után frissül az oldal a megváltozott adatlistával. 	| 1| 
 
-## Security Vulnerabilities
+## Frontend
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+| Frontend programozás (HTML / CSS /JavaScript / REST API kliens)	| 15| 
+|:----------------------------|----------------:|
+| Ajax osztály elkészítése GET és POST, PUT és DELETE metódusokkal	| 2| 
+| Szakdoga osztály létrehozása, és a megfelelő elemekbe a megfelelő adatok elhelyezése. 	| 2| 
+| Megjelennek a szakdolgozat mellett a szerkesztés és törlés lehetőségei (nem muszáj ikonokkal)	| 1| 
+| A szakdolgozatok megjelennek az oldalon a mintának megfelelően. (megtörténik a példányosítás)	| 2| 
+| A Szakdoga osztályban törlés és módosítás események létrehozása, illetve ezek kiváltanak eseményeket a főprogramban	| 2| 
+| A "torol" esemény a megfelelő végpontot hívja, 	| 2| 
+| A módosít esemény az adatokat betölti az űrlapba	| 2| 
+| Vagy a módosít, vagy az új adat hívása megvalósul API végponton keresztül. 	| 2| 
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
